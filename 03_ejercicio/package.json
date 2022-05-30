@@ -1,0 +1,11 @@
+{
+  "name": "ejercicio3",
+  "version": "1.0.0",
+  "description": "Ejercicio 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "node factorial-for.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
