@@ -17,6 +17,5 @@ console.log(ultimaLetra);
 let sinEspacios = estudiante.replace(/\s/g, ''); // Uso de RegEx
 console.log(sinEspacios);
 
-let regexNombre = /Federico/; // Creacion de RegEx para luego usarla en la varBooleana
-let varBooleana = regexNombre.test(estudiante);
+let varBooleana = estudiante.includes("Federico");
 console.log(varBooleana);
