@@ -38,3 +38,29 @@ let dateFilter = new Date(2010, 1, 1);
 console.log(dateFilter);
 let posteriores2010 = peliculasArr.filter(pelicula => pelicula.fecha > dateFilter);
 console.log(posteriores2010);
+
+// Directores de la lista de peliculas original
+
+const directores = peliculasArr.map(directores => {
+  return directores.director;
+})
+
+console.log(directores);
+
+// Titulos de la lista de peliculas
+
+const titulos = peliculasArr.map (titulos => {
+  return titulos.titulo;
+})
+
+console.log(titulos);
+
+// Lista que concatene la lista de directores y la lista de los titulos (concat)
+
+const dirTitulos = peliculasArr.map(directores => {
+  return directores.director.concat(directores.titulo);
+})
+
+console.log(dirTitulos);
+
+
