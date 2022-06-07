@@ -1,6 +1,6 @@
 const parrafos = document.querySelectorAll(".parrafo");
 const secciones = document.querySelectorAll(".seccion");
-const papelera = document.getElementById("eliminador")
+const papelera = document.querySelector("#eliminador")
 
 parrafos.forEach(parrafo => {
   // Momento de incializacion del arrastre
@@ -35,10 +35,13 @@ secciones.forEach(seccion => {
   })
 })
 
+papelera.addEventListener("dragover", event => {
+  event.preventDefault()
+  event.dataTransfer.dropEffect = "copy"
+})
+
 papelera.addEventListener("drop", event => {
   const id_parrafo = event.dataTransfer.getData("id");
-  const parrafo = document.getElementById(id_parrafo);
-  console.log(parrafo);
-  secciones.removeChild(parrafo);
+  document.getElementById(id_parrafo).remove();
 })
 
